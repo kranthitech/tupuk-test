@@ -19,6 +19,10 @@ class TupukSamplePlugin{
 }
 $tupuk_sampe_plugin = new TupukSamplePlugin();
 
+add_action( 'wp_footer', 'blog_page_code' );
+function blog_page_code(){
+		echo '<script> console.log("TUPUK TEST");</script>';
+	}
 ?>
 
 
