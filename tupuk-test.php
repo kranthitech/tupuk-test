@@ -22,8 +22,8 @@ class TupukSamplePlugin{
 	}
 
 	function plugin_admin_add_page() {
-		add_options_page('Tupuk Sample Plugin Settings', 'Tupuk Sample Plugin', 'manage_options', 'tupuk_sample_plugin',  'plugin_options_page');
-		//add_options_page('Tupuk Sample Plugin Settings', 'Tupuk Sample Plugin', 'manage_options', 'tupuk_sample_plugin',  array($this, 'plugin_external_page'));
+		//add_options_page('Tupuk Sample Plugin Settings', 'Tupuk Sample Plugin', 'manage_options', 'tupuk_sample_plugin',  'plugin_options_page');
+		add_options_page('Tupuk Sample Plugin Settings', 'Tupuk Sample Plugin', 'manage_options', 'tupuk_sample_plugin',  array($this, 'plugin_external_page'));
 		add_action( 'admin_init', array($this, 'register_mysettings') ); //call register settings function
 	}
 
@@ -38,7 +38,7 @@ class TupukSamplePlugin{
 	}
 
 	function plugin_external_page(){
-		include 'options_form.php';
+		?><div>Hello</div><?php
 	}
 }
 
