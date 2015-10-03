@@ -72,8 +72,8 @@ echo '<p>Main description of this section here.</p>';
 } ?>
 
 <?php function plugin_setting_string() {
-$options = get_option('plugin_options');
-echo "<input id='plugin_text_string' name='plugin_options[text_string]' size='40' type='text' value='{$options['text_string']}' />";
+$options = get_option('tupuk_options');
+echo "<input id='plugin_text_string' name='tupuk_options[text_string]' size='40' type='text' value='{$options['text_string']}' />";
 } ?>
 
 <?php // validate our options
