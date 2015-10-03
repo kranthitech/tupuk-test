@@ -62,6 +62,7 @@ function plugin_options_page(){
 <?php
 }
 
+$tupuk_sample_plugin = new TupukSamplePlugin();
 
 ?>
 
