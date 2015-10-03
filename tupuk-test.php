@@ -45,7 +45,8 @@ function plugin_options_page() {
 <div>
 <h2>My custom plugin</h2>
 Options relating to the Custom Plugin.
-
+  Previous value - <p><?php echo get_option( 'extra_post_info' ); ?></p>
+   
   <form method="post" action="options.php">
     <?php settings_fields( 'extra-post-info-settings' ); ?>
     <?php do_settings_sections( 'extra-post-info-settings' ); ?>
