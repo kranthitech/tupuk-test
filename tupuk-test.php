@@ -16,7 +16,7 @@ function blog_page_code(){
 }
 
 function admin_menu_code(){
-	echo '<div>Hello Tupuk</div>'
+	echo '<div>Hello Tupuk</div>';
 }
 
 ?>
