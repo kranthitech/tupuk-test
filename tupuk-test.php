@@ -8,6 +8,14 @@ Version: 0.1
 
 class TupukSamplePlugin{
 
+	function __construct() {
+		add_action( 'wp_footer', 'blog_page_code' );
+		
+	}
+	
+	function blog_page_code(){
+		echo '<script> console.log("TUPUK TEST");</script>';
+	}
 }
 
 
