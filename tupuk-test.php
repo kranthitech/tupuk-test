@@ -38,7 +38,7 @@ class TupukSamplePlugin{
 	}
 
 	function plugin_external_page(){
-		include dirname(__FILE__) . 'options_form.php'
+		include dirname(__FILE__) . 'options_form.php';
 	}
 }
 
