@@ -38,7 +38,7 @@ class TupukSamplePlugin{
 	}
 
 	function plugin_external_page(){
-		?><div>Hello</div><?php
+		?><?php include 'options_form.php'; ?><?php
 	}
 }
 
