@@ -69,7 +69,6 @@ add_settings_field('plugin_text_string', 'Plugin Text Input', 'plugin_setting_st
 
 <?php function plugin_section_text() {
 echo '<p>Main description of this section here.</p>';
-echo '<p>Previous value- '+get_option('tupuk_options')+'</p>';
 } ?>
 
 <?php function plugin_setting_string() {
