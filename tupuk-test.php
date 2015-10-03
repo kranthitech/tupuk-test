@@ -17,7 +17,7 @@ class TupukSamplePlugin{
 		echo '<script> console.log("TUPUK TEST");</script>';
 	}
 }
-
+$tupuk_sampe_plugin = new TupukSamplePlugin();
 
 ?>
 
