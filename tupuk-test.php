@@ -49,39 +49,17 @@ function plugin_options_page() {
 <div>
 <h2>My custom plugin</h2>
 Options relating to the Custom Plugin.
-<form action="options.php" method="post">
-<?php settings_fields('tupuk_options'); ?>
-<?php do_settings_sections('plugin'); ?>
- 
-<input name="Submit" type="submit" value="<?php esc_attr_e('Save Changes'); ?>" />
-</form></div>
+  <form method="post" action="options.php">
+    <?php settings_fields( 'extra-post-info-settings' ); ?>
+    <?php do_settings_sections( 'extra-post-info-settings' ); ?>
+    <table class="form-table">
+      <tr valign="top">
+      <th scope="row">Extra post info:</th>
+      <td><input type="text" name="extra_post_info" value="<?php echo get_option( 'extra_post_info' ); ?>"/></td>
+      </tr>
+    </table>
+    <?php submit_button(); ?>
+  </form>
  
 <?php
 }?>
-
-<?php // add the admin settings and such
-add_action('admin_init', 'plugin_admin_init');
-function plugin_admin_init(){
-register_setting( 'tupuk_options', 'tupuk_options', 'plugin_options_validate' );
-add_settings_section('plugin_main', 'Main Settings', 'plugin_section_text', 'plugin');
-add_settings_field('plugin_text_string', 'Plugin Text Input', 'plugin_setting_string', 'plugin', 'plugin_main');
-}?>
-
-<?php function plugin_section_text() {
-echo '<p>Main description of this section here.</p>';
-} ?>
-
-<?php function plugin_setting_string() {
-$options = get_option('tupuk_options');
-echo "<input id='plugin_text_string' name='tupuk_options[text_string]' size='40' type='text' value='{$options['text_string']}' />";
-} ?>
-
-<?php // validate our options
-function plugin_options_validate($input) {
-$newinput['text_string'] = trim($input['text_string']);
-if(!preg_match('/^[a-z0-9]{32}$/i', $newinput['text_string'])) {
-$newinput['text_string'] = '';
-}
-return $newinput;
-}
-?>
