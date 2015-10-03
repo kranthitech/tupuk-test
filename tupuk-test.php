@@ -19,6 +19,10 @@ function my_plugin_menu() {
 	add_options_page( 'Tupuk Plugin Options', 'Tupuk Plugin', 'manage_options', 'tupuk_options', 'my_plugin_options' );
 }
 
+$plugin = plugin_basename(__FILE__); 
+add_filter("plugin_action_links_$plugin", 'your_plugin_settings_link' );
+
+
 function my_plugin_options() {
 	if ( !current_user_can( 'manage_options' ) )  {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
@@ -27,4 +31,13 @@ function my_plugin_options() {
 	echo '<p>Here is where the form would go if I actually had options.</p>';
 	echo '</div>';
 }
+
+// Add settings link on plugin page
+function your_plugin_settings_link($links) { 
+  $settings_link = '<a href="options-general.php?page=tupuk_options">Settings</a>'; 
+  array_unshift($links, $settings_link); 
+  return $links; 
+}
+ 
+
 ?>
