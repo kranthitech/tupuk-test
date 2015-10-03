@@ -39,9 +39,7 @@ class TupukSamplePlugin{
 	  return $links; 
 	}
 
-	function plugin_options_page(){
-		include dirname( __FILE__ ) . 'options_form.php';
-	}
+	
 }
 
 
