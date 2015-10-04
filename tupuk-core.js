@@ -24,11 +24,10 @@ function defineTupukEvents() {
 
    	//emit tupuk_page_exit event
     tupuk_listen(document, 'mouseout',function(e){
-    	console.log('Mouse went outside the document')
-		e = e ? e : window.event;
+    	e = e ? e : window.event;
 		var from = e.relatedTarget || e.toElement;
 		if ((!from || from.nodeName == "HTML") && (!e.clientY || (e.clientY <=0 ))) {
-			console.log('User trying to exit')
+		
 			emitEvent('tupuk_page_exit')
 		}
     })
@@ -52,7 +51,8 @@ function defineTupukEvents() {
 	        } else {
 	            document.fireEvent("on" + event.eventType, event);
 	        }
-	        tupuk_events_emitted['tupuk_'+eventName] = true
+	        tupuk_events_emitted[eventName] = true
+	        console.log('Emitted event - '+eventName)
         }
         
     }
