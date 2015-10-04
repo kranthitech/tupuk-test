@@ -12,6 +12,9 @@ function defineTupukEvents() {
     document.addEventListener('tupuk_page_loaded',function(){
     	console.log('received a page load event')
     })
+    document.addEventListener('tupuk_page_loaded',function(){
+    	console.log('received another page load event')
+    })
 
     function emitEvent(eventName) {        
         //only emit if this event was not already emitted
