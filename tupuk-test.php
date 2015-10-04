@@ -12,6 +12,8 @@ class TupukSamplePlugin{
 		add_action( 'wp_footer', array($this, 'blog_page_code') );
 		add_action( 'admin_menu', array($this, 'plugin_admin_add_page') );
 
+		wp_register_script( 'tupuk-core', '/wp-content/plugins/tupuk-test/tupuk-core.js');
+
 		// Add settings link on plugin page
 		$plugin = plugin_basename(__FILE__); 
 		add_filter("plugin_action_links_$plugin", array($this, 'your_plugin_settings_link') );
