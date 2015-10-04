@@ -21,18 +21,18 @@ function defineTupukEvents() {
 	    	},d*1000)
     	})
     })
-    document.addEventListener('tupuk_elapsed_5',function(){
-    	console.log('5 seconds elapsed')
+
+   	//emit tupuk_page_exit event
+    tupuk_listen(document, 'mouseout',function(e){
+    	console.log('Mouse went outside the document')
+		e = e ? e : window.event;
+		var from = e.relatedTarget || e.toElement;
+		if ((!from || from.nodeName == "HTML") && (!e.clientY || (e.clientY <=0 ))) {
+			console.log('User trying to exit')
+			emitEvent('tupuk_page_exit')
+		}
     })
-    document.addEventListener('tupuk_elapsed_10',function(){
-    	console.log('10 seconds elapsed')
-    })
-    document.addEventListener('tupuk_elapsed_30',function(){
-    	console.log('30 seconds elapsed')
-    })
-    document.addEventListener('tupuk_elapsed_60',function(){
-    	console.log('60 seconds elapsed')
-    })
+
     function emitEvent(eventName) {        
         //only emit if this event was not already emitted
         if(!tupuk_events_emitted[eventName]){
@@ -56,8 +56,19 @@ function defineTupukEvents() {
         }
         
     }
+
+	
 }
 
+function tupuk_listen(obj, evt, fn) {
+	//some browsers support addEventListener, and some use attachEvent
+    if (obj.addEventListener) {
+        obj.addEventListener(evt, fn, false);
+    }
+    else if (obj.attachEvent) {
+        obj.attachEvent("on" + evt, fn);
+    }
+}
 //this is to ensure that even if the user uses multiple tupuk plugins, 
 //the event emitting happens only once
 if (typeof tupuk_events_defined === 'undefined') {
