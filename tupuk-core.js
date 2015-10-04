@@ -20,6 +20,14 @@ function defineTupukEvents() {
 	    		emitOnce('tupuk_elapsed_'+d)
 	    	},d*1000)
     	})
+
+    	//emit scrolled to bottom
+	    tupuk_listen(window, 'scroll',function(){
+	    	console.log('scrolling')
+	    	if($(window).scrollTop() + $(window).height() > getDocHeight() - 100){
+	    		emitOnce('tupuk_scroll_bottom')
+	    	}
+	    })
     })
 
    	//emit tupuk_page_exit event
@@ -32,13 +40,7 @@ function defineTupukEvents() {
 		}
     })
 
-    //emit scrolled to bottom
-    tupuk_listen(window, 'scroll',function(){
-    	console.log('scrolling')
-    	if($(window).scrollTop() + $(window).height() > getDocHeight() - 100){
-    		emitOnce('tupuk_scroll_bottom')
-    	}
-    })
+
 
     function emitOnce(eventName) {        
         //only emit if this event was not already emitted
