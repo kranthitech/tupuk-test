@@ -24,9 +24,11 @@ function defineTupukEvents() {
     	//emit scrolled to bottom
 	    tupuk_listen(window, 'scroll',function(){
 	    	console.log('scrolling')
-	    	if($(window).scrollTop() + $(window).height() > getDocHeight() - 100){
-	    		emitOnce('tupuk_scroll_bottom')
-	    	}
+	    	
+	    	if ((window.innerHeight + window.scrollY) >= getDocHeight() - 100) {
+		        // you're at the bottom of the page
+		        emitOnce('tupuk_scroll_bottom')
+		    }
 	    })
     })
 
