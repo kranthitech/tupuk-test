@@ -21,8 +21,6 @@ class TupukSamplePlugin{
 		$plugin = plugin_basename(__FILE__); 
 		add_filter("plugin_action_links_$plugin", array($this, 'your_plugin_settings_link') );
 
-		// Add a custom class to the post container 
-		add_filter( 'post_class', 'wpse_filter_post_class' );
 	}
 	
 	function blog_page_code(){
@@ -47,22 +45,6 @@ class TupukSamplePlugin{
 
 	function plugin_options_page(){
 		?><?php include 'options-form.php';?><?php
-	}
-
-	function wpse_filter_post_class( $classes ) {
-	    // How you determine what class is up to you;
-	    // We will assume you've determined the class name
-	    // and added it to $my_post_class
-	    // 
-	    
-	    $post_classes = $classes
-	    $my_post_class = 'some-class';
-
-	    // Add it to the array of post classes
-	    //$classes[] = $my_post_class;
-
-	    // Return the array
-	    return $classes;
 	}
 }
 
