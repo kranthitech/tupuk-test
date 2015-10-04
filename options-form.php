@@ -1,4 +1,4 @@
-<script>var tupuk_sample_plugin_value = '<?php echo get_option( 'extra_post_info' ); ?>'</script>
+<script type="text/javascript">var tupuk_sample_plugin_value = '<?php echo get_option( 'extra_post_info' ); ?>'</script>
 <form method="post" action="options.php">
   <?php settings_fields( 'extra-post-info-settings' ); ?>
   <?php do_settings_sections( 'extra-post-info-settings' ); ?>

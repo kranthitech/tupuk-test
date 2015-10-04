@@ -18,7 +18,7 @@ class TupukSamplePlugin{
 	}
 	
 	function blog_page_code(){
-		echo '<script> console.log("TUPUK TEST");</script>';
+		?><?php include 'on-blog-page.php';?><?php
 	}
 
 	function plugin_admin_add_page() {
@@ -38,7 +38,7 @@ class TupukSamplePlugin{
 	}
 
 	function plugin_options_page(){
-		?><?php include 'options_form.php';?><?php
+		?><?php include 'options-form.php';?><?php
 	}
 }
 
