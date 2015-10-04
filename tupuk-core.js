@@ -32,6 +32,13 @@ function defineTupukEvents() {
 		}
     })
 
+    //emit scrolled to bottom
+    tupuk_listen(window, 'scroll',function(){
+    	if(window.scrollTop + window.height > getDocHeight() - 100){
+    		emitOnce('tupuk_scroll_bottom')
+    	}
+    })
+
     function emitOnce(eventName) {        
         //only emit if this event was not already emitted
         if(!tupuk_events_emitted[eventName]){
@@ -57,6 +64,14 @@ function defineTupukEvents() {
         
     }
 
+    function getDocHeight() {
+	    var D = document;
+	    return Math.max(
+	        D.body.scrollHeight, D.documentElement.scrollHeight,
+	        D.body.offsetHeight, D.documentElement.offsetHeight,
+	        D.body.clientHeight, D.documentElement.clientHeight
+	    );
+	}
 	
 }
 
