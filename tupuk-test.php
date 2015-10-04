@@ -9,9 +9,11 @@ Version: 0.1
 class TupukSamplePlugin{
 
 	function __construct() {
+		//hook to insert code on blog page
 		add_action( 'wp_footer', array($this, 'blog_page_code') );
+		//hook to insert code on admin page
 		add_action( 'admin_menu', array($this, 'plugin_admin_add_page') );
-
+		//register the script that is common for all tupuk plugins
 		wp_register_script( 'tupuk-core', plugins_url( 'tupuk-test/tupuk-core.js' ));
 
 		// Add settings link on plugin page
