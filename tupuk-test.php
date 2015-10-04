@@ -49,10 +49,14 @@ class TupukSamplePlugin{
 	}
 
 	function wpse_filter_post_class( $classes ) {
+	    // How you determine what class is up to you;
+	    // We will assume you've determined the class name
+	    // and added it to $my_post_class
+	    $my_post_class = 'some-class';
 
 	    // Add it to the array of post classes
-	    //$classes[] = 'tupuk-post-container';
-		array_push($classes,'tupuk-post-container');
+	    $classes[] = $my_post_class;
+
 	    // Return the array
 	    return $classes;
 	}
