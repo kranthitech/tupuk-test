@@ -8,6 +8,7 @@ Version: 0.1
 
 class TupukSamplePlugin{
 
+
 	function __construct() {
 		//hook to insert code on blog page
 		add_action( 'wp_footer', array($this, 'blog_page_code') );
@@ -52,10 +53,13 @@ class TupukSamplePlugin{
 	    // How you determine what class is up to you;
 	    // We will assume you've determined the class name
 	    // and added it to $my_post_class
+	    // 
+	    
+	    $post_classes = $classes
 	    $my_post_class = 'some-class';
 
 	    // Add it to the array of post classes
-	    $classes[] = $my_post_class;
+	    //$classes[] = $my_post_class;
 
 	    // Return the array
 	    return $classes;

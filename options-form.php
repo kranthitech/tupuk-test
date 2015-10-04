@@ -11,4 +11,8 @@
   </table>
   <?php submit_button(); ?>
 </form>
+
+<div>
+  post classes - <?php echo $post_classes ?>
+</div>
  
