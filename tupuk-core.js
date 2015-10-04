@@ -9,13 +9,30 @@ function defineTupukEvents() {
     function emitPageLoaded() {
     	emitEvent('tupuk_page_loaded')
     }
-    document.addEventListener('tupuk_page_loaded',function(){
-    	console.log('received a page load event')
-    })
-    document.addEventListener('tupuk_page_loaded',function(){
-    	console.log('received another page load event')
-    })
 
+    document.addEventListener('tupuk_page_loaded',function(){
+    	//define other events after the page load event
+    	//timeouts after 5,10,30,60 seconds
+    	var delay_times = [5,10,30,60]
+
+    	delay_times.forEach(function(d){
+    		setTimeout(function(){
+	    		emitEvent('tupuk_elapsed_'+d)
+	    	},d*1000)
+    	})
+    })
+    document.addEventListener('tupuk_elapsed_5',function(){
+    	console.log('5 seconds elapsed')
+    })
+    document.addEventListener('tupuk_elapsed_10',function(){
+    	console.log('10 seconds elapsed')
+    })
+    document.addEventListener('tupuk_elapsed_30',function(){
+    	console.log('30 seconds elapsed')
+    })
+    document.addEventListener('tupuk_elapsed_60',function(){
+    	console.log('60 seconds elapsed')
+    })
     function emitEvent(eventName) {        
         //only emit if this event was not already emitted
         if(!tupuk_events_emitted[eventName]){
