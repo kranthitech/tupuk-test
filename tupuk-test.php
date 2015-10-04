@@ -21,7 +21,7 @@ class TupukSamplePlugin{
 		add_filter("plugin_action_links_$plugin", array($this, 'your_plugin_settings_link') );
 
 		// Add a custom class to the post container 
-		//add_filter( 'post_class', 'wpse_filter_post_class' );
+		add_filter( 'post_class', 'wpse_filter_post_class' );
 	}
 	
 	function blog_page_code(){
@@ -51,8 +51,8 @@ class TupukSamplePlugin{
 	function wpse_filter_post_class( $classes ) {
 
 	    // Add it to the array of post classes
-	    $classes[] = 'tupuk-post-container';
-
+	    //$classes[] = 'tupuk-post-container';
+		array_push($classes,'tupuk-post-container');
 	    // Return the array
 	    return $classes;
 	}
