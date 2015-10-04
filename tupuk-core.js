@@ -7,7 +7,7 @@ function defineTupukEvents() {
     }
 
     function emitPageLoaded() {
-    	emitEvent('tupuk_page_loaded')
+    	emitOnce('tupuk_page_loaded')
     }
 
     document.addEventListener('tupuk_page_loaded',function(){
@@ -17,7 +17,7 @@ function defineTupukEvents() {
 
     	delay_times.forEach(function(d){
     		setTimeout(function(){
-	    		emitEvent('tupuk_elapsed_'+d)
+	    		emitOnce('tupuk_elapsed_'+d)
 	    	},d*1000)
     	})
     })
@@ -28,11 +28,11 @@ function defineTupukEvents() {
 		var from = e.relatedTarget || e.toElement;
 		if ((!from || from.nodeName == "HTML") && (!e.clientY || (e.clientY <=0 ))) {
 		
-			emitEvent('tupuk_page_exit')
+			emitOnce('tupuk_page_exit')
 		}
     })
 
-    function emitEvent(eventName) {        
+    function emitOnce(eventName) {        
         //only emit if this event was not already emitted
         if(!tupuk_events_emitted[eventName]){
         	var event; // The custom event that will be created
