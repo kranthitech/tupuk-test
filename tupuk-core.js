@@ -34,7 +34,8 @@ function defineTupukEvents() {
 
     //emit scrolled to bottom
     tupuk_listen(window, 'scroll',function(){
-    	if(window.scrollTop + window.height > getDocHeight() - 100){
+    	console.log('scrolling')
+    	if($(window).scrollTop() + $(window).height() > getDocHeight() - 100){
     		emitOnce('tupuk_scroll_bottom')
     	}
     })
