@@ -15,11 +15,11 @@ class TupukSamplePlugin{
 		//hook to insert code on admin page
 		add_action( 'admin_menu', array($this, 'plugin_admin_add_page') );
 		//register the script that is common for all tupuk plugins
-		wp_register_script( 'tupuk-core', plugins_url( 'tupuk-test/common/scripts/tupuk-core.js' ));
+		wp_register_script( 'tupuk-client-core', plugins_url( 'tupuk-test/common/scripts/tupuk-client-core.js' ));
 		wp_register_script( 'tupuk-angular', plugins_url( 'tupuk-test/common/scripts/angular.min.js' ));
 		wp_register_script( 'tupuk-angular-ui-bootstrap', plugins_url( 'tupuk-test/common/scripts/ui-bootstrap-tpls-0.13.4.min.js'));
 		wp_register_script( 'tupuk-bootstrap', plugins_url( 'tupuk-test/common/scripts/bootstrap.min.js'));
-		wp_register_script( 'tupuk-bootstrap', plugins_url( 'tupuk-test/common/styles/bootstrap.min.css'));
+		wp_register_style( 'tupuk-bootstrap', plugins_url( 'tupuk-test/common/styles/bootstrap.min.css'));
 
 		// Add settings link on plugin page
 		$plugin = plugin_basename(__FILE__); 
