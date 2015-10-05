@@ -1,1 +1,1 @@
-angular.module("tupukAdmin",["ui.bootstrap"])
+angular.module("tupukAdmin",["ui.bootstrap","ngAnimate"])
