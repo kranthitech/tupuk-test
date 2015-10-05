@@ -4,10 +4,16 @@
 <?php wp_enqueue_style('tupuk-bootstrap') ?>
 
 <div ng-app>
-  <label>Name:</label>
-  <input type="text" ng-model="yourName" placeholder="Enter a name here">
-  <hr>
-  <h1>Hello {{yourName}}!</h1>
+  <accordion close-others="'true'">
+    <accordion-group heading="Look and Feel" is-open="'true'">
+      This is where the template goes
+    </accordion-group>
+	<accordion-group heading="Trigger" is-open="'true'">
+      Show the trigger and targeting configuration here
+    </accordion-group>  </accordion>
+    <accordion-group heading="Additional Configuration" is-open="'true'">
+      This content is straight in the template.
+    </accordion-group>
 </div>
 
 <?php include 'options-form.php';?>
