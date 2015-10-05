@@ -1,4 +1,4 @@
-<script src="../scripts/angular.min.js"></script>
+<script src="<?php echo dirname(__DIR__)?>/scripts/angular.min.js"></script>
 
 <div ng-app>
   <label>Name:</label>
