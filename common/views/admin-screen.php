@@ -7,7 +7,7 @@
  
 
 
-<div ng-app="tupukAdmin" class="container">
+<div ng-app="tupukAdmin" class="container-fluid">
 	<accordion close-others="'true'">
 		<accordion-group heading="Look and Feel" is-open="'true'">
 		  This is where the template goes
