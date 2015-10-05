@@ -2,6 +2,7 @@
 
 <?php wp_enqueue_script('tupuk-bootstrap') ?>
 <?php wp_enqueue_script('tupuk-angular') ?>
+<?php wp_enqueue_script('tupuk-angular-animate') ?>
 <?php wp_enqueue_script('tupuk-angular-ui-bootstrap') ?>
 <?php wp_enqueue_script('tupuk-admin-core') ?>
  
