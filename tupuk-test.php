@@ -16,6 +16,8 @@ class TupukSamplePlugin{
 		add_action( 'admin_menu', array($this, 'plugin_admin_add_page') );
 		//register the script that is common for all tupuk plugins
 		wp_register_script( 'tupuk-client-core', plugins_url( 'tupuk-test/common/scripts/tupuk-client-core.js' ));
+		wp_register_script( 'tupuk-admin-core', plugins_url( 'tupuk-test/common/scripts/tupuk-admin-core.js' ));
+		
 		wp_register_script( 'tupuk-angular', plugins_url( 'tupuk-test/common/scripts/angular.min.js' ));
 		wp_register_script( 'tupuk-angular-ui-bootstrap', plugins_url( 'tupuk-test/common/scripts/ui-bootstrap-tpls-0.13.4.min.js'));
 		wp_register_script( 'tupuk-bootstrap', plugins_url( 'tupuk-test/common/scripts/bootstrap.min.js'));

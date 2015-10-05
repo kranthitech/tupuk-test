@@ -1,9 +1,13 @@
-<?php wp_enqueue_script('tupuk-angular') ?>
-<?php wp_enqueue_script('tupuk-angular-ui-bootstrap') ?>
-<?php wp_enqueue_script('tupuk-bootstrap') ?>
 <?php wp_enqueue_style('tupuk-bootstrap') ?>
 
-<div ng-app>
+<?php wp_enqueue_script('tupuk-bootstrap') ?>
+<?php wp_enqueue_script('tupuk-angular') ?>
+<?php wp_enqueue_script('tupuk-angular-ui-bootstrap') ?>
+<?php wp_enqueue_script('tupuk-admin-core') ?>
+
+
+
+<div ng-app="tupukAdmin">
   <accordion close-others="'true'">
     <accordion-group heading="Look and Feel" is-open="'true'">
       This is where the template goes
