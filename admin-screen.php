@@ -1,6 +1,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
 
-<div>
+<div ng-app>
   <label>Name:</label>
   <input type="text" ng-model="yourName" placeholder="Enter a name here">
   <hr>
