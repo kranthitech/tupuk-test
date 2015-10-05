@@ -1,5 +1,7 @@
 <?php wp_enqueue_script('tupuk-angular') ?>
 <?php wp_enqueue_script('tupuk-angular-ui-bootstrap') ?>
+<?php wp_enqueue_script('tupuk-bootstrap') ?>
+<?php wp_enqueue_style('tupuk-bootstrap') ?>
 
 <div ng-app>
   <label>Name:</label>
