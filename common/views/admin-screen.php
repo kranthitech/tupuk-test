@@ -13,7 +13,10 @@
 	<h3>Setup your Tupuk Sample Widget</h3>
 	<accordion close-others="'true'">
 		<accordion-group heading="Display" is-open="'true'">
-		  <?php include dirname(__FILE__).'/../../widget/template.php' ?>
+			<div class="container">
+				<?php include dirname(__FILE__).'/../../widget/template.php' ?>
+			</div>
+		  
 		</accordion-group>
 		<accordion-group heading="Trigger">
 		  When and where should your widget show up?
