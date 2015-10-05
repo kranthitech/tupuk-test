@@ -11,13 +11,13 @@
 <div ng-app="tupukAdmin" class="container-fluid">
 	<accordion close-others="'true'">
 		<accordion-group heading="Look and Feel" is-open="'true'">
-		  This is where the template goes
+		  How should your popup look like?
 		</accordion-group>
 		<accordion-group heading="Trigger">
-		  Show the trigger and targeting configuration here
+		  When and where should your popup show up?
 		</accordion-group>
 		<accordion-group heading="Additional Configuration">
-		  This content is straight in the template.
+		  Provide additional configuration for your popup
 		</accordion-group>
 	</accordion>
 </div>
