@@ -44,7 +44,7 @@ class TupukSamplePlugin{
 	}
 
 	function plugin_options_page(){
-		?><?php include 'options-form.php';?><?php
+		?><?php include 'admin-screen.php';?><?php
 	}
 }
 
