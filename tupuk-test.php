@@ -26,6 +26,9 @@ class TupukSamplePlugin{
 
 		wp_register_style( 'tupuk-bootstrap', plugins_url( 'tupuk-test/common/styles/bootstrap.min.css'));
 
+		wp_register_style( 'tupuk-widget-blank', plugins_url( 'tupuk-test/widget/styles/blank-popup-styles.css'));
+		wp_register_style( 'tupuk-widget-yes-no', plugins_url( 'tupuk-test/widget/styles/yesno-popup-styles.css'));
+
 		// Add settings link on plugin page
 		$plugin = plugin_basename(__FILE__); 
 		add_filter("plugin_action_links_$plugin", array($this, 'your_plugin_settings_link') );

@@ -1,5 +1,5 @@
-<link rel="stylesheet" type="text/css" href="blank-popup-styles.css">
-<link rel="stylesheet" type="text/css" href="yesno-popup-styles.css">
+<?php wp_enqueue_style('tupuk-widget-blank') ?>
+<?php wp_enqueue_style('tupuk-widget-yes-no') ?>
 
 <div class="yeloni-popup-page-container">
 	<!-- this spans the whole viewport and will have a darker bg-->
