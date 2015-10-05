@@ -14,7 +14,7 @@
 		</accordion-group>
 		<accordion-group heading="Trigger">
 		  Show the trigger and targeting configuration here
-		</accordion-group>  </accordion>
+		</accordion-group>
 		<accordion-group heading="Additional Configuration">
 		  This content is straight in the template.
 		</accordion-group>
