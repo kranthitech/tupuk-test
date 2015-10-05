@@ -1,4 +1,4 @@
-<script src="<?php echo basename(__FILE__)?>/scripts/angular.min.js"></script>
+<script src="<?php echo plugin_basename(__DIR__)?>/scripts/angular.min.js"></script>
 
 <div ng-app>
   <label>Name:</label>
