@@ -1,0 +1,154 @@
+.yeloni-popup-block-container-pageSider .yeloni-yn-content-topdata .yline1
+{
+	margin-top: 20%;
+}
+.yeloni-popup-block-container-pageSider .yeloni-yn-content-topdata, .yeloni-popup-block-container-pageSider .yeloni-yn-content-buttons
+{
+	border: 1px solid white;
+	padding: 0px 30px;
+}
+
+
+
+/* ================================= styles for popup start =========================== */
+.yeloni-popup-block-container
+{
+	width: 600px;
+	height: 400px;
+	border-radius: 10px;
+	padding: 0px 4px;
+}
+.yeloni-yn-content-topdata
+{
+	font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
+	text-align: center;
+	padding:10px;	
+	color: #424242;
+}
+.yeloni-yn-content-topdata hr
+{
+	 border: 0; 
+	 height: 1px; 
+	 background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+.yeloni-light-text
+{
+	font-size: 14px;
+	color: #A4A4A4;
+	margin: 20px 30px 10px 30px;
+	text-align: center;
+}
+.yeloni-yn-content-topdata .yline1
+{	
+	font-size: 16px;
+	color: #fff;
+	margin-top: -20px;
+}
+.yeloni-yn-content-topdata .yline1 span
+{
+	background-color: #585858;
+	height: 24px;
+	border-radius: 24px;
+	padding: 14px;
+}
+.yeloni-yn-content-topdata .yline2
+{
+	font-size: 22px;
+	font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
+}
+.yeloni-yn-content-topdata .yline3
+{
+
+	font-size: 36px;
+	font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
+}
+.yeloni-yn-content-topdata .yline4
+{
+	text-transform: uppercase;
+	font-size: 66px;
+	font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
+}
+
+.yeloni-yn-content-topdata img
+{
+	
+}
+/* button styles */
+.yeloni-yn-content-buttons td
+{
+	padding: 5px;
+}
+.yeloni-superlarge
+{
+	font-size: 50px;
+}
+.yeloni-yn-yesbutton {
+	-moz-box-shadow: 1px 8px 3px -3px #478510;
+	-webkit-box-shadow: 1px 8px 3px -3px #478510;
+	box-shadow: 1px 8px 3px -3px #478510;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #9dce2c), color-stop(1, #8cb82b) );
+	background:-moz-linear-gradient( center top, #9dce2c 5%, #8cb82b 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#9dce2c', endColorstr='#8cb82b');
+	background-color:#9dce2c;
+	border:1px solid #83c41a;
+	width: 100%;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #689324;
+	padding: 10px 0px 10px 0px;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	font-style:normal;
+	border-radius: 12px;
+	
+}
+.yeloni-yn-yesbutton:hover
+{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8cb82b), color-stop(1, #9dce2c) );
+	background:-moz-linear-gradient( center top, #8cb82b 5%, #9dce2c 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8cb82b', endColorstr='#9dce2c');
+	background-color:#8cb82b;
+}
+.yeloni-yn-nobutton {
+	-moz-box-shadow: 1px 8px 3px -3px #c2c2c2;
+	-webkit-box-shadow: 1px 8px 3px -3px #c2c2c2;
+	box-shadow: 1px 8px 3px -3px #c2c2c2;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9) );
+	background:-moz-linear-gradient( center top, #f9f9f9 5%, #e9e9e9 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9');
+	background-color:#f9f9f9;
+	border:1px solid #dcdcdc;
+	width: 100%;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #ffffff;
+	padding: 10px 0px 10px 0px;
+	color:#666666;
+	font-family:Arial;
+	font-size:18px;
+	font-style:normal;
+	border-radius: 12px;
+}
+.yeloni-yn-nobutton:hover 
+{
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9) );
+	background:-moz-linear-gradient( center top, #e9e9e9 5%, #f9f9f9 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9');
+	background-color:#e9e9e9;
+}
+/* ================================= styles for popup end =========================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
