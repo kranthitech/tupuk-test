@@ -15,7 +15,7 @@ class TupukSamplePlugin{
 		//hook to insert code on admin page
 		add_action( 'admin_menu', array($this, 'plugin_admin_add_page') );
 		//register the script that is common for all tupuk plugins
-		wp_register_script( 'tupuk-core', plugins_url( 'tupuk-test/tupuk-core.js' ));
+		wp_register_script( 'tupuk-core', plugins_url( 'tupuk-test/common/scripts/tupuk-core.js' ));
 
 		// Add settings link on plugin page
 		$plugin = plugin_basename(__FILE__); 
@@ -24,7 +24,7 @@ class TupukSamplePlugin{
 	}
 	
 	function blog_page_code(){
-		?><?php include 'common/on-blog-page.php';?><?php
+		?><?php include 'common/views/on-blog-page.php';?><?php
 	}
 
 	function plugin_admin_add_page() {
@@ -44,7 +44,7 @@ class TupukSamplePlugin{
 	}
 
 	function plugin_options_page(){
-		?><?php include 'common/admin-screen.php';?><?php
+		?><?php include 'common/views/admin-screen.php';?><?php
 	}
 }
 
