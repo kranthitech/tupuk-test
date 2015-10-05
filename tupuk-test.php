@@ -17,7 +17,7 @@ class TupukSamplePlugin{
 		//register the script that is common for all tupuk plugins
 		wp_register_script( 'tupuk-core', plugins_url( 'tupuk-test/common/scripts/tupuk-core.js' ));
 		wp_register_script( 'tupuk-angular', plugins_url( 'tupuk-test/common/scripts/angular.min.js' ));
-
+		wp_register_script( 'tupuk-angular-ui-bootstrap', plugins_url( 'tupuk-test/common/scripts/ui-bootstrap-tpls-0.13.4.min.js'));
 
 		// Add settings link on plugin page
 		$plugin = plugin_basename(__FILE__); 
