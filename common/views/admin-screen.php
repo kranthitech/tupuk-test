@@ -13,7 +13,7 @@
 	<h3>Setup your Tupuk Sample Widget</h3>
 	<accordion close-others="'true'">
 		<accordion-group heading="How should your widget look like?" is-open="'true'">
-		  <?php require '../widget/template.php' ?>
+		  <?php include '../../widget/template.php' ?>
 		</accordion-group>
 		<accordion-group heading="When and where should your widget show up?">
 		  When and where should your widget show up?
