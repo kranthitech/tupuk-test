@@ -12,13 +12,13 @@
 	<hr>
 	<h3>Setup your Tupuk Sample Widget</h3>
 	<accordion close-others="'true'">
-		<accordion-group heading="How should your popup look like?" is-open="'true'">
-		  How should your widget look like?
+		<accordion-group heading="How should your widget look like?" is-open="'true'">
+		  <?php include '../widget/template.php' ?>
 		</accordion-group>
-		<accordion-group heading="When and where should your popup show up?">
+		<accordion-group heading="When and where should your widget show up?">
 		  When and where should your widget show up?
 		</accordion-group>
-		<accordion-group heading="Provide additional parameters for your popup">
+		<accordion-group heading="Provide additional parameters for your widget">
 		  Provide additional configuration for your widget
 		</accordion-group>
 	</accordion>
