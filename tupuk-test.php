@@ -24,7 +24,7 @@ class TupukSamplePlugin{
 	}
 	
 	function blog_page_code(){
-		?><?php include 'on-blog-page.php';?><?php
+		?><?php include 'common/on-blog-page.php';?><?php
 	}
 
 	function plugin_admin_add_page() {
@@ -44,7 +44,7 @@ class TupukSamplePlugin{
 	}
 
 	function plugin_options_page(){
-		?><?php include 'admin-screen.php';?><?php
+		?><?php include 'common/admin-screen.php';?><?php
 	}
 }
 
