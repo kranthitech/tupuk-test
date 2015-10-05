@@ -1,4 +1,4 @@
-<script src="<?php echo plugin_basename(__DIR__)?>/scripts/angular.min.js"></script>
+<?php wp_enqueue_script('tupuk-angular') ?>
 
 <div ng-app>
   <label>Name:</label>
