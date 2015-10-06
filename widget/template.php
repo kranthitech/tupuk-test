@@ -1,7 +1,7 @@
 <?php wp_enqueue_style('tupuk-widget-blank') ?>
 <?php wp_enqueue_style('tupuk-widget-yes-no') ?>
 
-<div class="yeloni-popup-page-container">
+<div class="yeloni-popup-page-container2">
 	<!-- this spans the whole viewport and will have a darker bg-->
 
 	<div class="yeloni-popup-block-container-pageSider">
