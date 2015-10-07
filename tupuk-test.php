@@ -19,12 +19,18 @@ class TupukSamplePlugin{
 		wp_register_script( 'tupuk-admin-core', plugins_url( 'tupuk-test/common/scripts/tupuk-admin-core.js' ));
 		
 		wp_register_script( 'tupuk-angular', plugins_url( 'tupuk-test/common/scripts/angular.min.js' ));
+		wp_register_script( 'tupuk-angular-toggle-switch', plugins_url( 'tupuk-test/common/scripts/angular-toggle-switch.min.js' ));		
 		wp_register_script( 'tupuk-bootstrap', plugins_url( 'tupuk-test/common/scripts/bootstrap.min.js'));
 		wp_register_script( 'tupuk-angular-animate', plugins_url( 'tupuk-test/common/scripts/angular-animate.min.js' ));
 		wp_register_script( 'tupuk-angular-ui-bootstrap', plugins_url( 'tupuk-test/common/scripts/ui-bootstrap-tpls-0.13.4.min.js'));
-		
+		wp_register_script( 'tupuk-angular-base64', plugins_url( 'tupuk-test/common/scripts/angular-base64.min.js'));
+		wp_register_script( 'tupuk-angular-formly', plugins_url( 'tupuk-test/common/scripts/formly.min.js'));
+		wp_register_script( 'tupuk-api-check', plugins_url( 'tupuk-test/common/scripts/api-check.min.js'));
+		wp_register_script( 'tupuk-formly-bootstrap', plugins_url( 'tupuk-test/common/scripts/angular-formly-templates-bootstrap.min.js'));
+
 
 		wp_register_style( 'tupuk-bootstrap', plugins_url( 'tupuk-test/common/styles/bootstrap.min.css'));
+		wp_register_style( 'tupuk-angular-toggle-switch', plugins_url( 'tupuk-test/common/styles/angular-toggle-switch.css'));
 
 		wp_register_style( 'tupuk-widget-blank', plugins_url( 'tupuk-test/widget/blank-popup-styles.css'));
 		wp_register_style( 'tupuk-widget-yes-no', plugins_url( 'tupuk-test/widget/yesno-popup-styles.css'));
@@ -46,7 +52,9 @@ class TupukSamplePlugin{
 	}
 
 	function register_mysettings() {
-		register_setting( 'extra-post-info-settings', 'extra_post_info' );
+		register_setting( 'tupuk-sample-widget-options', 'tupuk_widget_settings' );
+		register_setting( 'tupuk-sample-widget-options', 'tupuk_widget_template' );
+		register_setting( 'tupuk-sample-widget-options', 'tupuk_widget_active' );
 	}
 
 	function your_plugin_settings_link($links) { 

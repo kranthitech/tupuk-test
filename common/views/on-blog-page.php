@@ -1,6 +1,7 @@
 
 <script type="text/javascript">
-	console.log("TUPUK TEST");
-	console.log("post class- <?php get_post_class()?>")
+	var tupuk_trigger = "tupuk_page_exit"
+	
 </script>
 <?php wp_enqueue_script('tupuk-client-core') ?>
+<?php include dirname(__FILE__).'/../../widget/decoded_blog_template.php';?>
