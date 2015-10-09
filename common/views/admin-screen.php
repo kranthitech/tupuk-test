@@ -1,36 +1,29 @@
 <script type="text/javascript">
-	var tupuk_plugin_path = '<?php echo plugins_url( 'tupuk-test') ?>'
-	console.log('plugin path- '+tupuk_plugin_path)
-</script>
-
-<?php wp_enqueue_style('tupuk-bootstrap') ?>
-<?php wp_enqueue_style('tupuk-angular-toggle-switch') ?>
-
-<?php wp_enqueue_script('tupuk-bootstrap') ?>
-<?php wp_enqueue_script('tupuk-angular') ?>
-<?php wp_enqueue_script('tupuk-angular-base64') ?>
-<?php wp_enqueue_script('tupuk-angular-animate') ?>
-<?php wp_enqueue_script('tupuk-api-check') ?>
-<?php wp_enqueue_script('tupuk-angular-formly') ?>
-<?php wp_enqueue_script('tupuk-formly-bootstrap') ?>
-
-<?php wp_enqueue_script('tupuk-angular-ui-bootstrap') ?>
-<?php wp_enqueue_script('tupuk-admin-core') ?>
-<?php wp_enqueue_script('tupuk-angular-toggle-switch') ?>
- 
-
-
-
-<div ng-app="tupukAdmin" class="container-fluid" ng-controller="tupukAdminController">
+	var tupuk_plugin_path = "<?php echo plugins_url( 'tupuk-test');?>";
+	console.log('plugin path- '+tupuk_plugin_path);
+</script><?php 
+wp_enqueue_style('tupuk-bootstrap');
+wp_enqueue_style('tupuk-angular-toggle-switch');
+wp_enqueue_script('tupuk-bootstrap');
+wp_enqueue_script('tupuk-angular');
+wp_enqueue_script('tupuk-angular-base64');
+wp_enqueue_script('tupuk-angular-animate');
+wp_enqueue_script('tupuk-api-check');
+wp_enqueue_script('tupuk-angular-formly');
+wp_enqueue_script('tupuk-formly-bootstrap');
+wp_enqueue_script('tupuk-angular-ui-bootstrap');
+wp_enqueue_script('tupuk-angular-toggle-switch');
+wp_enqueue_script('tupuk-admin-core');
+?><div ng-app="tupukAdmin" class="container-fluid" ng-controller="tupukAdminController">
 	<hr>
 	<h3>Setup your Tupuk Sample Widget</h3>
 	<hr>
-		<toggle-switch ng-model="widgetActive" on-label="Enabled" off-label="Disabled"></toggle-switch>
+		<toggle-switch ng-model="widgetActive" on-label="Enabled" off-label="Disabled">
+		</toggle-switch>
 	<hr>
 	<accordion close-others="'true'">
 		<accordion-group heading="Display" is-open="'true'">
-			<div class="container">
-				<?php 
+			<div class="container"><?php 
 					//If the template has been updated and stored in the database,pick it up from there
 					//otherwise, pick it up from the 
 					
@@ -43,10 +36,7 @@
 					else
 					{
 						include dirname(__FILE__).'/../../widget/template.php';
-					}
-					
-				?>
-			</div>		  
+					}?></div>		  
 		</accordion-group>
 
 		<accordion-group heading="Settings">
@@ -92,8 +82,4 @@
 	        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
 	    </div>
 	</script>
-</div>
-
-
-<?php include 'options-form.php';?>
-
+</div><?php include 'options-form.php';?>

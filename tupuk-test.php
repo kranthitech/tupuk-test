@@ -5,7 +5,6 @@ Description: This is a play ground to test plugin functions
 Author: Kranthi Kiran
 Version: 0.1
 */
-
 class TupukSamplePlugin{
 
 
@@ -42,7 +41,7 @@ class TupukSamplePlugin{
 	}
 	
 	function blog_page_code(){
-		?><?php include 'common/views/on-blog-page.php';?><?php
+		include 'common/views/on-blog-page.php';
 	}
 
 	function plugin_admin_add_page() {
@@ -64,12 +63,11 @@ class TupukSamplePlugin{
 	}
 
 	function plugin_options_page(){
-		?><?php include 'common/views/admin-screen.php';?><?php
+		include 'common/views/admin-screen.php';
 	}
 }
 
 $tupuk_sample_plugin = new TupukSamplePlugin();
-
 ?>
 
 
